@@ -1,0 +1,19 @@
+<%- include('./components/header') %> 
+ 
+<div class="container">
+  <h1 class="mb-4">Welcome to FaceBook</h1>
+  <h5>Update your Post</h5>
+  <form action=/edit-feed/<%= result._id %> method = "POST">
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Name</label>
+        <textarea  name="name" id="name" class="form-control"><%= result.name %></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Message</label>
+        <textarea name="message" class="form-control" id="message"><%= result.message %></textarea>
+      </div>
+      
+      <button type="submit" class="btn btn-info">Submit</button>
+    </form>
+</div>
+<%- include('./components/footer') %>  
